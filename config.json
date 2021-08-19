@@ -1,0 +1,15 @@
+{
+    "homebridge": {
+        "identity": "your gateway identity",
+        "iplocal": "your gateway ipv4"
+    },
+    "device": {
+        "num1": "name",
+        "num2": "name",
+        "num3": "name"
+    },
+    "web": {
+        "port": "3000",
+        "security_token": "your security token"
+    }
+}
