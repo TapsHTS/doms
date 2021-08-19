@@ -27,4 +27,4 @@ Run `node app.js` for run the website and go to `https://localhost:PORT/ikea/SEC
 
 ## 📌 Credits
 
-Thank's to [@CliffS](https://github.com/CliffS/ikea-tradfri) for the node modules and Me ❤
+Thank's to [@CliffS](https://github.com/CliffS/ikea-tradfri) for the node modules and Me ❤.
