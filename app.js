@@ -1,10 +1,24 @@
 const express = require('express');
 const Tradfri = require('ikea-tradfri');
+const { Bulb } = require('yeelight.io');
 const data = require('./config.json');
 
 const app = express();
 const tradfri = new Tradfri(data.homebridge.iplocal, data.homebridge.identity);
+const l1 = new Bulb(data.yeelight.ip);
 
+
+//For the yeelight light
+function y_light_on() {
+    l1.connect();
+    l1.onn();
+}
+
+//For the yeelight light
+function y_light_off() {
+    l1.connect();
+    l1.off();
+}
 
 //For the light
 function light(state) {
@@ -46,6 +60,18 @@ function brightness(pourcent) {
         })
 }
 
+app.use(function(req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods',
+        'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers',
+        'X-Requested-With, Content-Type, Authorization');
+    if ('OPTIONS' == req.method) {
+        res.sendStatus(204);
+    } else {
+        next();
+    };
+});
 
 //Get the light status
 app.post(`/ikea/${data.web.security_token}/light/:state`, (req, res) => {
@@ -248,6 +274,37 @@ app.post(`/ikea/${data.web.security_token}/color/:device/:color`, (req, res) => 
         }
 
     } catch (error) {
+        return res.status(404).json({
+            status: 'error: ' + error
+        })
+
+    }
+
+
+
+})
+
+app.post(`/yeelight/${data.web.security_token}/light/:state`, (req, res) => {
+
+    const state = req.params.state
+
+    try {
+        if (state === "on") {
+            y_light_on()
+            return res.status(202).json({
+                status: 'on'
+            })
+        }
+
+        if (state === "off") {
+            y_light_off()
+            return res.status(202).json({
+                status: 'off'
+            })
+        }
+
+    } catch (error) {
+        console.log(error)
         return res.status(404).json({
             status: 'error: ' + error
         })

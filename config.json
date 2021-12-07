@@ -3,6 +3,10 @@
         "identity": "your gateway identity",
         "iplocal": "your gateway ipv4"
     },
+    "yeelight": {
+        "identity": "your yeelight identity",
+        "ip": "your yeelight ipv4"
+    },
     "device": {
         "num1": "name",
         "num2": "name",

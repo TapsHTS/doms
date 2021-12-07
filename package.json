@@ -1,27 +1,31 @@
 {
-  "name": "ikeapi",
-  "version": "1.0.0",
-  "description": "An api to control your ikea smart devices. Work with [ikea-tradfri](https://www.npmjs.com/package/ikea-tradfri) and [express](https://www.npmjs.com/package/express)",
-  "main": "app.js",
-  "dependencies": {
-    "express": "^4.17.1",
-    "hex2dec": "^1.1.2",
-    "ikea-tradfri": "^5.1.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TapsHTS/ikeapi.git"
-  },
-  "keywords": [
-    "ikeapi"
-  ],
-  "author": "TapsHTS",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TapsHTS/ikeapi/issues"
-  },
-  "homepage": "https://github.com/TapsHTS/ikeapi#readme"
+    "name": "doms",
+    "version": "2.0.0",
+    "description": "An api to control your ikea smart devices and yeelight devices. Work with ikea-tradfri, express and yeelight.io.",
+    "main": "app.js",
+    "dependencies": {
+        "express": "^4.17.1",
+        "hex2dec": "^1.1.2",
+        "ikea-tradfri": "^5.1.0",
+        "yeelight.io": "^1.1.5"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TapsHTS/doms.git"
+    },
+    "keywords": [
+        "doms",
+        "ikeapi",
+        "yeelight"
+    ],
+    "author": "TapsHTS",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/TapsHTS/doms/issues"
+    },
+    "homepage": "https://github.com/TapsHTS/doms#readme"
 }
