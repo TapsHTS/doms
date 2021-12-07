@@ -24,7 +24,7 @@ Go into the `config.json` file.
 
 ## 🚀 Let's go
 
-Run `node app.js` for generate the website and go to `https://localhost:PORT/ikea/SECURITY_TOKEN/`... **whith de POST method** *(you can use [Axios](https://www.npmjs.com/package/axios))*
+Run `node app.js` for generate the website and go to `https://localhost:PORT/ikea/SECURITY_TOKEN/`... **with the POST method** *(you can use [Axios](https://www.npmjs.com/package/axios))*
 
 ## 📌 Credits
 
